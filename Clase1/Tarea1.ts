@@ -49,7 +49,6 @@
   //   * altura
   // También un método que calcule el área  =  base * altura,
   // ese método debe de retornar un numero.
-    // console.log(`nombre es ${nombre} y su rol es ${rol}`)
     class rectangulo{
         base: number;
         altura: number;
