@@ -1,0 +1,21 @@
+<form>
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" 
+        placeholder="Nombre del restaurante"
+        [(ngModel)]="restaurante"
+        [ngModelOptions]="{standalone: true}"
+        >
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" 
+        placeholder="Ciudad"
+        [(ngModel)]="ciudad"
+        [ngModelOptions]="{standalone: true}"
+        >
+      </div>
+      <div class="col">
+       <button class="btn btn-info" type="submit" (click)="agregar(restaurante,ciudad)">agregar</button>
+      </div>
+    </div>
+  </form>
