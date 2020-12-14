@@ -5,11 +5,12 @@
     <div class="wrap-table100">
       
       <div class="table100 mb-4">
-        <app-input (value)="agregar($event)"></app-input>
+        <app-input [array_rest]="array_rest" (value)="agregar($event)"></app-input>
        
       </div>
       <div class="table100">
-        <app-tabla [items_restaurante]="items_restaurante" [items_ciudad]="items_ciudad"  ></app-tabla>
+        <app-tabla [array_rest]="array_rest">
+        </app-tabla>
         
       </div>
     </div>

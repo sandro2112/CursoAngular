@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Rest } from 'src/app/app.component';
 
 @Component({
   selector: 'app-tabla',
@@ -7,8 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TablaComponent implements OnInit {
 
-  @Input() items_restaurante:string[] = [];
-  @Input() items_ciudad:string[] = [];
+  @Input() array_rest:Rest[] =[];
 
   constructor() { }
 

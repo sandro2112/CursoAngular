@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Type } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,25 +7,27 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'guia-restaurantes';
-  items_restaurante: string[] = [];
-  items_ciudad: string[] = [];
+  array_rest: Rest[]=[];
 
   agregar({restaurante, ciudad}) {
-    if(this.items_restaurante.find(x => x == restaurante)){
+    if(this.array_rest.find(x => x.a_restaurante == restaurante)){
       alert('No debe ingresar un nombre de restaurante que ya exista')
     }else{
       //Volver a su orden
-      this.items_restaurante.reverse();
-      this.items_ciudad.reverse();
+      this.array_rest.reverse();
       //Agregar restaurantes y ciudades a los arrays
-      this.items_restaurante.push(restaurante);
-      this.items_ciudad.push(ciudad);
+      this.array_rest.push({a_restaurante:restaurante,a_ciudad:ciudad});
       //Ordenar Descendetemente
-      this.items_restaurante.reverse();
-      this.items_ciudad.reverse();
+      this.array_rest.reverse();
     }
 
     
   }
 
+}
+
+export class Rest{
+  a_restaurante:string ='';
+  a_ciudad:string = ''
+  constructor(a_restaurante:string, a_ciudad:string){};
 }
